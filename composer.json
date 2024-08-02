@@ -1,0 +1,22 @@
+{
+    "name": "Avesh_Faq",
+    "description": "This module is used for creating FAQs",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Avesh Naik",
+            "email": "aveshnaik007@gmail.com"
+        }
+    ],
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Avesh\\Faq\\": ""
+        }
+    }
+}

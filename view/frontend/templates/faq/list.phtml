@@ -1,0 +1,38 @@
+<?php
+
+/**
+ *
+ * @category  Custom Development
+ * @email     contactus@learningmagento.com
+ * @author    Avesh Naik
+ * @website   learningmagento.com
+ * @Date      02-08-2024
+ */
+
+/**
+ * @var \Avesh\Faq\Block\Faq\FaqList $block
+ */
+?>
+<?php
+    $faqlist = $block->getFaqList();
+    $index = 1;
+?>
+<div>
+    <div class="faq-content">
+            <div class="faq-accordion">
+                <?php if ($faqlist->getTotalCount()): ?>
+                    <?php foreach ($faqlist->getItems() as $faq): ?>
+                        <h3><?= $index ?>.<?= $block->escapeHtml(__($faq->getQuestion())) ?></h3>
+                        <div>
+                            <p><?=  $block->filterOutputHtml($faq->getAnswer()) ?></p>
+                        </div>
+                    <?php $index++;
+                    endforeach; ?>
+                <?php else: ?>
+                    <div>
+                        <h2><?= $block->escapeHtml(__('No FAQ available')) ?></h2>
+                    </div>
+                <?php endif; ?>
+            </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Avesh\Faq\Api\Data\FaqInterface" type="Avesh\Faq\Model\Faq"/>
+    <preference for="Avesh\Faq\Api\Data\FaqSearchResultsInterface" type="Avesh\Faq\Model\FaqSearchResult"/>
+    <preference for="Avesh\Faq\Api\FaqRepositoryInterface" type="Avesh\Faq\Model\FaqRepository"/>
+</config>
